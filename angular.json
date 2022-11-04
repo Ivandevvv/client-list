@@ -31,7 +31,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -121,6 +123,9 @@
     "@schematics/angular:pipe": {
       "skipTests": true,
       "standalone": true
+    },
+    "@schematics/angular:interceptor": {
+      "skipTests": true
     }
   }
 }
