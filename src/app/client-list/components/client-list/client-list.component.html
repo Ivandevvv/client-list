@@ -1,0 +1,22 @@
+
+<div class="gl-container">
+
+  <p-table [value]="clientListService.clientsList$ | async" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Наименование организации</th>
+        <th>ИНН</th>
+        <th>Дата открытия счета</th>
+        <th>Остаток</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-client>
+      <tr class="client-row" *ngIf="client | typed:clientItem as clientItem" [routerLink]="clientItem.id + ''">
+        <td>{{ clientItem.name }}</td>
+        <td>{{ clientItem.inn }}</td>
+        <td>{{ clientItem.openingDate | date:'dd MMMM YYYY' }}</td>
+        <td>{{ clientItem.balance | balance:7:2 }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

@@ -35,7 +35,6 @@ export class BalancePipe implements PipeTransform {
 
   private addsChartsIfNeed(balanceStr: string, minCharts: number) {
     const currentCharts = balanceStr.length;
-    console.log({ currentCharts, minCharts });
     if (minCharts - currentCharts  > 0) {
       const addedStr = Array(minCharts - currentCharts).fill(0).join('');
       return addedStr + balanceStr;

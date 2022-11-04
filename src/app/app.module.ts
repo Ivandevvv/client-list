@@ -5,6 +5,7 @@ import { TableModule } from 'primeng/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ClientItemInterceptor } from './shared/interceptor/client-item.interceptor';
 import { ClientListInterceptor } from './shared/interceptor/client-list.interceptor';
 import { BalancePipe } from './shared/pipe/balance.pipe';
 import { TypedPipe } from './shared/pipe/typed.pipe';
@@ -30,6 +31,11 @@ registerLocaleData(localeRu);
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ClientListInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ClientItemInterceptor,
       multi: true,
     },
     { provide: LOCALE_ID, useValue: 'ru' }

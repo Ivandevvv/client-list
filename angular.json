@@ -111,7 +111,7 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "skipSelector": true
+      "skipTests": true
     },
     "@schematics/angular:service": {
       "skipTests": true

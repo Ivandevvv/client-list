@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
 import { ApiRequestUrl } from '../types/api-request.enum';
+import { ClientListResponse } from '../types/client-list-response.type';
 import { ClientList } from '../types/client-list.type';
 
 @Injectable({
@@ -18,7 +19,7 @@ export class ClientListService {
   loadClients() {
     if (this.clientsList.getValue()) { return; }
 
-    this.httpClient.get<{ result: ClientList[] }>(ApiRequestUrl.get_clients).pipe(
+    this.httpClient.get<ClientListResponse>(ApiRequestUrl.get_clients).pipe(
       map(({ result }) => result)
     ).subscribe({
       next: data => {
