@@ -1,4 +1,8 @@
 
+.back-link {
+  margin-bottom: 24px;
+}
+
 h1 {
   font-size: 36px;
   line-height: 40px;
@@ -18,6 +22,12 @@ h1 {
 
 .phone-field {
   margin-bottom: 36px;
+
+  ::ng-deep {
+    .p-disabled, .p-component:disabled {
+      opacity: 1;
+    }
+  }
 
   p {
     width: 230px;

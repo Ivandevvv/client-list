@@ -1,5 +1,7 @@
 
 <div class="gl-container" *ngIf="currentClient">
+  <a pButton label="Назад" routerLink="../" class="back-link"></a>
+
   <h1>{{ currentClient.name }}</h1>
   <p class="info-field">
     <span>Наименование организации</span>
@@ -15,19 +17,18 @@
   </p>
   <p class="info-field">
     <span>Остаток</span>
-    <span>{{ currentClient.balance | balance }}</span>
+    <span>{{ currentClient.balance | balance:null:2 }}</span>
   </p>
   <div class="phone-field info-field">
     <p>Номер телефона</p>
     <div class="p-inputgroup">
-      <button type="button" pButton icon="pi pi-check" *ngIf="editNumber"
-              (click)="openConfirmationPhoneChange()"></button>
+      <button type="button" pButton *ngIf="editNumber"
+              (click)="openConfirmationPhoneChange()">Ок</button>
       <input type="text" pInputText placeholder="Номер телефона"
              [formControl]="phoneControl" mask="+0 (000) 000 00 00">
 
       <button type="button" pButton
-              [icon]="editNumber ? 'pi pi-times' : 'pi pi-pencil'"
-              (click)="cancelOrEdit()"></button>
+              (click)="cancelOrEdit()">{{ !editNumber ? 'Изменить' : 'Отмена' }}</button>
     </div>
   </div>
   <p-table [value]="currentClient.payments" responsiveLayout="scroll">
