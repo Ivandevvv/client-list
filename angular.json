@@ -107,5 +107,19 @@
       }
     }
   },
-  "defaultProject": "client-list"
+  "defaultProject": "client-list",
+  "schematics": {
+    "@schematics/angular:component": {
+      "skipSelector": true
+    },
+    "@schematics/angular:service": {
+      "skipTests": true
+    },
+    "@schematics/angular:directive": {
+      "skipTests": true
+    },
+    "@schematics/angular:pipe": {
+      "skipTests": true
+    }
+  }
 }
