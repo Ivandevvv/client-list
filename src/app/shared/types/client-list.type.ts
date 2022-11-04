@@ -1,8 +1,9 @@
+import { Balance } from './balance.type';
 
 export interface ClientList {
   id: number;
   name: string;
   inn: string;
-  openingDate: number;
-  sum: number;
+  openingDate: string;
+  balance: Balance;
 }

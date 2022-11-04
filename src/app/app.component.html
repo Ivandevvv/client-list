@@ -1,7 +1,7 @@
 
 <div class="gl-container">
 
-  <p-table [value]="products" responsiveLayout="scroll">
+  <p-table [value]="clientListService.clientsList$ | async" responsiveLayout="scroll">
     <ng-template pTemplate="header">
       <tr>
         <th>Наименование организации</th>
@@ -10,12 +10,12 @@
         <th>Остаток</th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-product>
-      <tr>
-        <td>{{product.code}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.category}}</td>
-        <td>{{product.quantity}}</td>
+    <ng-template pTemplate="body" let-client>
+      <tr *ngIf="client | typed:clientItem as clientItem">
+        <td>{{ clientItem.name }}</td>
+        <td>{{ clientItem.inn }}</td>
+        <td>{{ clientItem.openingDate | date:'dd MMMM YYYY' }}</td>
+        <td>{{ clientItem.balance | balance:7:2 }}</td>
       </tr>
     </ng-template>
   </p-table>

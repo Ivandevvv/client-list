@@ -9,6 +9,7 @@ import { ClientList } from '../types/client-list.type';
 })
 export class ClientListService {
   private clientsList = new BehaviorSubject<ClientList[]>(null);
+  clientsList$ = this.clientsList.asObservable();
 
   constructor(
     private httpClient: HttpClient
