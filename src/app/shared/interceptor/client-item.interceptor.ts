@@ -2,10 +2,9 @@ import { Injectable } from '@angular/core';
 import {
   HttpRequest,
   HttpHandler,
-  HttpEvent,
   HttpInterceptor, HttpResponse
 } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { map, of } from 'rxjs';
 import { ApiRequestUrl } from '../types/api-request.enum';
 import { ClientFullResponse } from '../types/client-full-response.type';
 
@@ -14,13 +13,12 @@ export class ClientItemInterceptor implements HttpInterceptor {
 
   constructor() {}
 
-  intercept(request: HttpRequest<ClientFullResponse>, next: HttpHandler): Observable<HttpEvent<ClientFullResponse>> {
-    let clientReq: HttpRequest<any>;
+  intercept(request: HttpRequest<any>, next: HttpHandler) {
+    const initUrl = request.url;
+    const clientId = initUrl.replace( /^\D+/g, '');
+    let clientReq: HttpRequest<any> = request.clone({ url: '/assets/base/clients.json' });
+
     if (request.url.startsWith(ApiRequestUrl.get_single_client) && request.url !== ApiRequestUrl.get_clients) {
-
-      clientReq = request.clone({ url: '/assets/base/clients.json' });
-      const clientId = clientReq.url.replace(ApiRequestUrl.get_single_client, '');
-
       return next.handle(clientReq).pipe(
         map(data => {
           if (data instanceof HttpResponse<any>) {
@@ -29,6 +27,11 @@ export class ClientItemInterceptor implements HttpInterceptor {
           return data;
         })
       );
+    }
+    if (request.url.endsWith(ApiRequestUrl.change_phone)) {
+      return of(new HttpResponse({
+        status: 200, body: null
+      }));
     }
 
     return next.handle(request);

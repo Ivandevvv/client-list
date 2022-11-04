@@ -17,10 +17,18 @@ export class ClientItemService {
   ) { }
 
   loadClient(id: number) {
+    if (this.currentClient.getValue()?.id === id) { return; }
     this.httpClient.get<ClientFullResponse>(ApiRequestUrl.get_single_client + id).pipe(
       map(({ result }) => result)
     ).subscribe({
-      next: data => this.currentClient.next(data[0])
+      next: data => {
+        console.log(data);
+        this.currentClient.next(data[0]);
+      }
     });
+  }
+
+  changePhone(id: number, phoneNumber: string) {
+    return this.httpClient.post(`/${id}/${ApiRequestUrl.change_phone}`, { phoneNumber });
   }
 }

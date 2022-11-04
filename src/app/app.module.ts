@@ -1,6 +1,8 @@
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxMaskModule } from 'ngx-mask';
 import { TableModule } from 'primeng/table';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,10 +23,12 @@ registerLocaleData(localeRu);
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     TableModule,
     HttpClientModule,
     TypedPipe,
-    BalancePipe
+    BalancePipe,
+    NgxMaskModule.forRoot()
   ],
   bootstrap: [AppComponent],
   providers: [

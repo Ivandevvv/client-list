@@ -11,10 +11,30 @@
         "currency": "RUB"
       },
       "payments": [
-        { "paymentDate":  "2015-10-03T22:27:36Z", "agent": "Иванов о КО", "sum": 123123, "type": "incoming" },
-        { "paymentDate":  "2015-10-03T22:27:36Z", "agent": "Иванов о КО", "sum": 123123, "type": "outgoing" },
-        { "paymentDate":  "2015-10-03T22:27:36Z", "agent": "Иванов о КО", "sum": 123123, "type": "incoming" },
-        { "paymentDate":  "2015-10-03T22:27:36Z", "agent": "Иванов о КО", "sum": 123123.231, "type": "outgoing" }
+        {
+          "paymentDate":  "2015-10-03T22:27:36Z",
+          "agent": "Иванов о КО",
+          "balance": { "sum": 8946165.12712, "currency": "RUB" },
+          "type": "incoming"
+        },
+        {
+          "paymentDate":  "2015-10-03T22:27:36Z",
+          "agent": "Иванов о КО",
+          "balance": { "sum": 1231.331, "currency": "RUB" },
+          "type": "outgoing"
+        },
+        {
+          "paymentDate":  "2015-10-03T22:27:36Z",
+          "agent": "Иванов о КО",
+          "balance": { "sum": 3412.3, "currency": "RUB" },
+          "type": "incoming"
+        },
+        {
+          "paymentDate":  "2015-10-03T22:27:36Z",
+          "agent": "Иванов о КО",
+          "balance": { "sum": 12.32, "currency": "RUB" },
+          "type": "outgoing"
+        }
       ]
     },
     {
@@ -28,10 +48,30 @@
         "currency": "USD"
       },
       "payments": [
-        { "paymentDate":  "1996-09-03T16:53:19Z", "agent": "Александров о КО", "sum": 4121312, "type": "outgoing" },
-        { "paymentDate":  "1996-09-03T16:53:19Z", "agent": "Александров о КО", "sum": 123123123, "type": "outgoing" },
-        { "paymentDate":  "1996-09-03T16:53:19Z", "agent": "Александров о КО", "sum": 1231223, "type": "incoming" },
-        { "paymentDate":  "1996-09-03T16:53:19Z", "agent": "Александров о КО", "sum": 123.342342, "type": "incoming" }
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 984231.32, "currency": "USD" },
+          "type": "outgoing"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 123.32, "currency": "USD" },
+          "type": "outgoing"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 41.32, "currency": "USD" },
+          "type": "incoming"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 3.32, "currency": "USD" },
+          "type": "incoming"
+        }
       ]
     },
     {
@@ -45,10 +85,30 @@
         "currency": "USD"
       },
       "payments": [
-        { "paymentDate":  "1996-09-03T16:53:19Z", "agent": "Мирная о КО", "sum": 1231, "type": "outgoing" },
-        { "paymentDate":  "1996-09-03T16:53:19Z", "agent": "Мирная о КО", "sum": 56756.232, "type": "outgoing" },
-        { "paymentDate":  "1996-09-03T16:53:19Z", "agent": "Мирная о КО", "sum": 1231231123, "type": "incoming" },
-        { "paymentDate":  "1996-09-03T16:53:19Z", "agent": "Мирная о КО", "sum": 15675, "type": "incoming" }
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 984231.32, "currency": "USD" },
+          "type": "outgoing"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 123.32, "currency": "USD" },
+          "type": "outgoing"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 41.32, "currency": "USD" },
+          "type": "incoming"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 3.32, "currency": "USD" },
+          "type": "incoming"
+        }
       ]
     },
     {
@@ -62,10 +122,30 @@
         "currency": "USD"
       },
       "payments": [
-        { "paymentDate":  "2021-03-04T06:05:12Z", "agent": "Бурунова о КО", "sum": 657675.232, "type": "outgoing" },
-        { "paymentDate":  "2021-03-04T06:05:12Z", "agent": "Бурунова о КО", "sum": 1231567523, "type": "outgoing" },
-        { "paymentDate":  "2021-03-04T06:05:12Z", "agent": "Бурунова о КО", "sum": 6756756756, "type": "incoming" },
-        { "paymentDate":  "2021-03-04T06:05:12Z", "agent": "Бурунова о КО", "sum": 567567567, "type": "incoming" }
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 984231.32, "currency": "USD" },
+          "type": "outgoing"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 123.32, "currency": "USD" },
+          "type": "outgoing"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 41.32, "currency": "USD" },
+          "type": "incoming"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 3.32, "currency": "USD" },
+          "type": "incoming"
+        }
       ]
     },
     {
@@ -79,10 +159,30 @@
         "currency": "RUB"
       },
       "payments": [
-        { "paymentDate":  "2011-02-23T12:28:08Z", "agent": "Поддобрый о КО", "sum": 657675, "type": "outgoing" },
-        { "paymentDate":  "2011-02-23T12:28:08Z", "agent": "Поддобрый о КО", "sum": 34534662.23, "type": "outgoing" },
-        { "paymentDate":  "2011-02-23T12:28:08Z", "agent": "Поддобрый о КО", "sum": 55555, "type": "incoming" },
-        { "paymentDate":  "2011-02-23T12:28:08Z", "agent": "Вилкович о КО", "sum": 3453, "type": "incoming" }
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 984231.32, "currency": "USD" },
+          "type": "outgoing"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 123.32, "currency": "USD" },
+          "type": "outgoing"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 41.32, "currency": "USD" },
+          "type": "incoming"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 3.32, "currency": "USD" },
+          "type": "incoming"
+        }
       ]
     },
     {
@@ -96,10 +196,30 @@
         "currency": "RUB"
       },
       "payments": [
-        { "paymentDate":  "2009-06-04T05:16:00Z", "agent": "Вилкович о КО", "sum": 234232.23, "type": "outgoing" },
-        { "paymentDate":  "2009-06-04T05:16:00Z", "agent": "Поддобрый о КО", "sum": 2232332232323, "type": "outgoing" },
-        { "paymentDate":  "2009-06-04T05:16:00Z", "agent": "Вилкович о КО", "sum": 5552323522225.232, "type": "incoming" },
-        { "paymentDate":  "2009-06-04T05:16:00Z", "agent": "Поддобрый о КО", "sum": 3453, "type": "incoming" }
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 984231.32, "currency": "USD" },
+          "type": "outgoing"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 123.32, "currency": "USD" },
+          "type": "outgoing"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 41.32, "currency": "USD" },
+          "type": "incoming"
+        },
+        {
+          "paymentDate": "1996-09-03T16:53:19Z",
+          "agent": "Александров о КО",
+          "balance": { "sum": 3.32, "currency": "USD" },
+          "type": "incoming"
+        }
       ]
     }
   ]

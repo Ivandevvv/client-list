@@ -1,0 +1,28 @@
+
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 36px;
+}
+
+.info-field {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  &+ .info-field { margin-top: 16px; }
+  span:first-child {
+    width: 230px;
+  }
+}
+
+.phone-field {
+  margin-bottom: 36px;
+
+  p {
+    width: 230px;
+  }
+  &> div {
+    width: 400px;
+  }
+}
