@@ -22,7 +22,6 @@ export class ClientItemService {
       map(({ result }) => result)
     ).subscribe({
       next: data => {
-        console.log(data);
         this.currentClient.next(data[0]);
       }
     });

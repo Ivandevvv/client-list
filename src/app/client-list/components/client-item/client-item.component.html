@@ -21,14 +21,17 @@
   </p>
   <div class="phone-field info-field">
     <p>Номер телефона</p>
-    <div class="p-inputgroup">
-      <button type="button" pButton *ngIf="editNumber"
-              (click)="openConfirmationPhoneChange()">Ок</button>
+    <ng-container *ngIf="!editNumber">
+      <p>{{ currentClient.phoneNumber | mask:'+0 (000) 000 00 00' }}</p>
+      <button pButton label="Изменить" (click)="cancelOrEdit()"></button>
+    </ng-container>
+    <div class="p-inputgroup" *ngIf="editNumber">
+      <button type="button" pButton *ngIf="editNumber" label="Ок"
+              (click)="openConfirmationPhoneChange()"></button>
       <input type="text" pInputText placeholder="Номер телефона"
              [formControl]="phoneControl" mask="+0 (000) 000 00 00">
-
-      <button type="button" pButton
-              (click)="cancelOrEdit()">{{ !editNumber ? 'Изменить' : 'Отмена' }}</button>
+      <button type="button" pButton label="Отмена"
+              (click)="cancelOrEdit()"></button>
     </div>
   </div>
   <p-table [value]="currentClient.payments" responsiveLayout="scroll">

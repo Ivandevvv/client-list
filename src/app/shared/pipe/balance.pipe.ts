@@ -12,7 +12,10 @@ export class BalancePipe implements PipeTransform {
   }
 
   transform(value: Balance, minCharts?: number, toFixed?: number): string {
-    const regEx = /\B(?=(\d{3})+(?!\d))/g;
+    // в ТЗ говорится об отдельном компоненте для вывода денежной суммы,
+    // но обычно для преобразования контента в другой формат используются пайпы, поэтому компонент
+    // создавать я не стал
+    const regEx = /\B(?=(\d{3})+(?!\d))/g; // разбивает числовую строку на разряды
     let fullBalance = value.sum;
     const balanceArr = toFixed
       ? fullBalance.toFixed(toFixed).split('.')

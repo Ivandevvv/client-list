@@ -10,8 +10,10 @@ export class TypeTranslatePipe implements PipeTransform {
   transform(value: PaymentType): unknown {
     if (value === PaymentType.incoming) {
       return 'Входящее';
-    } else {
+    } else if (value === PaymentType.outgoing) {
       return 'Исходящее';
+    } else {
+      return value;
     }
   }
 

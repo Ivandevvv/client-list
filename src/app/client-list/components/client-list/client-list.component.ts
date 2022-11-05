@@ -8,7 +8,7 @@ import { ClientList } from '../../../shared/types/client-list.type';
   styleUrls: ['./client-list.component.scss']
 })
 export class ClientListComponent {
-  clientItem: ClientList;
+  ClientItemType: ClientList;
 
   constructor(
     public clientListService: ClientListService

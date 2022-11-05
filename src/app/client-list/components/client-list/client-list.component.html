@@ -11,7 +11,7 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-client>
-      <tr class="client-row" *ngIf="client | typed:clientItem as clientItem" [routerLink]="clientItem.id + ''">
+      <tr class="client-row" *ngIf="client | typed:ClientItemType as clientItem" [routerLink]="clientItem.id + ''">
         <td>{{ clientItem.name }}</td>
         <td>{{ clientItem.inn }}</td>
         <td>{{ clientItem.openingDate | date:'dd MMMM YYYY' }}</td>
